@@ -1,0 +1,37 @@
+{
+  "name": "gooddata",
+  "version": "0.0.1",
+  "description": "GoodData client api written in Node.js",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "lodash": "~2.4.1",
+    "request": "~2.30.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.6"
+  },
+  "scripts": {
+    "test": "tap tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mindflash/gooddata.git"
+  },
+  "keywords": [
+    "gd",
+    "good",
+    "data",
+    "gooddata",
+    "api",
+    "rest"
+  ],
+  "author": "Mindflash.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mindflash/gooddata/issues"
+  }
+}
