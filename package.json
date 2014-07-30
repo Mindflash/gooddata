@@ -9,7 +9,9 @@
   "dependencies": {
     "async": "~0.2.9",
     "lodash": "~2.4.1",
-    "request": "~2.30.0"
+    "request": "~2.30.0",
+    "JSONStream": "~0.8.4",
+    "through2": "~0.5.1"
   },
   "devDependencies": {
     "tap": "~0.4.6"
