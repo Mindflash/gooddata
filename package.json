@@ -1,6 +1,6 @@
 {
   "name": "gooddata",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "GoodData client api written in Node.js",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,16 @@
     "through2": "~0.5.1"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^4.0.0",
+    "eslint-config-mindflash": "git+ssh://git@github.com:Mindflash/eslint-config.git#main",
+    "eslint-plugin-import": "^2.2.0",
     "tap": "~0.4.6"
   },
   "scripts": {
+    "lint": "eslint .",
+    "lint:dev": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "tap tests/*.js"
   },
   "repository": {
