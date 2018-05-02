@@ -65,3 +65,63 @@ test('get attribute\'s elements by title when passing attribute object', functio
     });
   });
 });
+
+test('create filter', function (t) {
+  var params = {
+    elementId: config.elementId,
+    title: config.elementTitle
+  };
+
+  api.createFilter(params, function (err, res) {
+    t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
+    t.ok(res, 'should have responded ' + util.inspect(res));
+    t.end();
+  });
+});
+
+test('create user', function (t) {
+  var params = config.createUserData;
+
+  api.createUser(params, function (err, res) {
+    t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
+    t.ok(res, 'should have responded ' + util.inspect(res));
+    t.end();
+  });
+});
+
+test('get user info by login', function (t) {
+  var params = {
+    login: config.login
+  };
+
+  api.getUserInfoByLogin(params, function (err, res) {
+    t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
+    t.ok(res, 'should have responded ' + util.inspect(res));
+    t.end();
+  });
+});
+
+test('add use to project by role', function (t) {
+  var params = {
+    userId: config.userId,
+    userRoles: [config.roles]
+  };
+
+  api.addUserToProject(params, function (err, res) {
+    t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
+    t.ok(res, 'should have responded ' + util.inspect(res));
+    t.end();
+  });
+});
+
+test('delete user', function (t) {
+  var params = {
+    userId: config.userId
+  };
+
+  api.deleteUser(params, function (err, res) {
+    t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
+    t.ok(res, 'should have responded ' + util.inspect(res));
+    t.end();
+  });
+});
