@@ -116,12 +116,11 @@ test('add use to project by role', function (t) {
 
 test('delete user', function (t) {
   var params = {
-    userId: config.userId
+    userId: config.profileId
   };
 
-  api.deleteUser(params, function (err, res) {
+  api.deleteUser(params, function (err) {
     t.notOk(err, 'error on invalid login attempt ' + util.inspect(err));
-    t.ok(res, 'should have responded ' + util.inspect(res));
     t.end();
   });
 });
